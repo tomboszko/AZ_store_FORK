@@ -30,6 +30,8 @@
     <?php
 session_start();
 
+$totalGlobal = 0; // total global variable
+
 // Function to add a product to the shopping cart
 function addToCart($product) {
     if (!isset($_SESSION['shoppingCart'])) {
@@ -81,6 +83,7 @@ if (isset($_GET['removeFromCart']) && isset($_GET['id'])) {
 // Display contents
 if (isset($_SESSION['shoppingCart'])) {
     echo '<h1>Shopping Cart</h1>';
+
     echo '<ul>';
     foreach ($_SESSION['shoppingCart'] as $product) {
         echo '<li>';
@@ -88,13 +91,14 @@ if (isset($_SESSION['shoppingCart'])) {
         echo 'Price: $' . $product['price'] . '<br>';
         echo 'Quantity: ' . $product['quantity'] . '<br>';
         echo 'Sub-Total: $' . $product['price'] * $product['quantity'] . '<br>';
-        echo '<a href="?removeFromCart&id=' . $product['id'] . '">Remove from Cart</a>';
+        echo '<a href="?removeFromCart&id=' . $product['id'] . '" id="removeButton">Remove from Cart</a>';
         echo '</li>';
         $totalGlobal += $product['price'] * $product['quantity']; // total global calculation
     }
     echo '</ul>';
+
     echo '<div class="total-global">Total: $' . $totalGlobal . '</div>';
-    echo '<a href="checkout.php" class="checkout-button">Checkout</a>';
+    echo '<a href="checkout.php" id="checkoutButton">Checkout</a>';
 } 
 else {
     // Display a message if the cart is empty
