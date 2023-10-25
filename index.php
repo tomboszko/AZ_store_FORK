@@ -36,28 +36,75 @@
         </div>
     </div>   
 
-    <div id= "products">
     <h2>Our last products</h2>
+    <div id= "products">        
+        <div class="chaussure1">
+            <div class="top">
+                <img src="assets/images/shoe_one" alt="">
+            </div>
+
+            <div class="bottom">
+                <p class="name">Nike Air Max 270</p>
+                <p class="price">140€</p>
+                <button class="addBtn">Add to cart</button>
+            </div>
+        </div>
+
+        <div class="chaussure2">
+            <div class="top">
+                <img src="assets/images/shoe_two" alt="">
+            </div>
+
+            <div class="bottom">
+                <p class="name">Nike Air Max 280</p>
+                <p class="price">150€</p>
+                <button class="addBtn">Add to cart</button>
+            </div>
+        </div>
+
+        <div class="chaussure3">
+            <div class="top">
+                <img src="assets/images/shoe_three" alt="">
+            </div>
+
+            <div class="bottom">
+                <p class="name">Nike Air Max 290</p>
+                <p class="price">160€</p>
+                <button class="addBtn">Add to cart</button>
+            </div>
+        </div>
+
+        <div class="chaussure4">
+            <div class="top">
+                <img src="assets/images/shoe_four" alt="">
+            </div>
+
+            <div class="bottom">
+                <p class="name">Nike Air Max 300</p>
+                <p class="price">170€</p>
+                <button class="addBtn">Add to cart</button>
+            </div>
+        </div>
         <?php 
         // liste de nos 4 modèles de chaussure
-        $products = [
-            ['id' => 1, 'name' => 'Nike Air Max 270', 'price' => 140, 'image'=> ".assets/images/shoe_one.png"],
-            ['id' => 2, 'name' => 'Nike Air Max 280', 'price' => 150, 'image'=> ".assets/images/shoe_two.png"],
-            ['id' => 3, 'name' => 'Nike Air Max 290', 'price' => 160, 'image'=> ".assets/images/shoe_three.png"],
-            ['id' => 4, 'name' => 'Nike Air Max 300', 'price' => 170, 'image'=> ".assets/images/shoe_four.png"], 
+        // $products = [
+        //     ['id' => 1, 'name' => 'Nike Air Max 270', 'price' => 140, 'image'=> ".assets/images/shoe_one.png"],
+        //     ['id' => 2, 'name' => 'Nike Air Max 280', 'price' => 150, 'image'=> ".assets/images/shoe_two.png"],
+        //     ['id' => 3, 'name' => 'Nike Air Max 290', 'price' => 160, 'image'=> ".assets/images/shoe_three.png"],
+        //     ['id' => 4, 'name' => 'Nike Air Max 300', 'price' => 170, 'image'=> ".assets/images/shoe_four.png"], 
                 
-        ];
+        // ];
 
-        foreach ($products as $product) {
-            echo '<div class="product">';
-            echo '<h3>' . $product['name'] . '</h3>';
-            echo '<p>Prix : $' . $product['price'] . '</p>';
-            echo '<form>';
-            echo '<input type="hidden" name="product_id" value="' . $product['id'] . '">';
-            echo '<input type="submit" name="add_to_cart" value="Add to cart">';
-            echo '</form>';
-            echo '</div>';
-        }
+        // foreach ($products as $product) {
+        //     echo '<div class="product">';
+        //     echo '<h3>' . $product['name'] . '</h3>';
+        //     echo '<p>Prix : $' . $product['price'] . '</p>';
+        //     echo '<form>';
+        //     echo '<input type="hidden" name="product_id" value="' . $product['id'] . '">';
+        //     echo '<input type="submit" name="add_to_cart" value="Add to cart">';
+        //     echo '</form>';
+        //     echo '</div>';
+        // }
 
         //crerr les 4 fiches produits en html et ensuite quand clique sur add to cart, ça envoie l'article dans l'array de la session
         ?>

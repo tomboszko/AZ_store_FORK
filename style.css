@@ -50,6 +50,14 @@ align-items: center;
 .left{
     margin: auto;
 }
+
+.left button {
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, rgba(57,127,241,1) 0%, rgba(31,61,146,1) 100%);
+  color: white;
+}
 .right{
     margin: auto;
     img{
@@ -60,8 +68,32 @@ align-items: center;
 
 /* PRODUCTS DIV */
 #products{
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+#products .chaussure1 img{
+  height: 150px;
+}
+#products .chaussure2 img{
+  height: 150px;
+}
+#products .chaussure3 img{
+  height: 150px;
+}
+#products .chaussure4 img{
+  height: 150px;
+}
+
+.addBtn{
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  background-color: #397ff1;
 }
 /* ***************************** */
 
@@ -74,7 +106,9 @@ align-items: center;
     height: 350px;
   }
   .best{
-    font-size: 35px;
+    font-size: 55px;
+    max-width: 550px;
+    text-align: center;
   }
 
 }
