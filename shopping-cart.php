@@ -18,9 +18,11 @@
     </form>
 
 <?php
-session_start();
+    // Calculate the total including VAT
+$totalGlobal = 0;
 
-$totalGlobal = 0; // total global variable
+// Define the VAT rate (21%)
+$vatRate = 0.21;
 
 // Function to add a product to the shopping cart
 function addToCart($product) {
@@ -32,6 +34,7 @@ function addToCart($product) {
     $productKey = array_search($product['id'], array_column($_SESSION['shoppingCart'], 'id'));
 
     if ($productKey === false) {
+        // Add new entry for new product
         $_SESSION['shoppingCart'][] = $product;
     } else {
         // Update quantity if already in cart
@@ -72,6 +75,8 @@ if (isset($_GET['removeFromCart']) && isset($_GET['id'])) {
 
 // Display contents
 if (isset($_SESSION['shoppingCart'])) {
+
+    echo '<div id="cart">';
     echo '<h1>Shopping Cart</h1>';
 
     echo '<ul>';
@@ -80,15 +85,22 @@ if (isset($_SESSION['shoppingCart'])) {
         echo 'Product: ' . $product['product'] . '<br>';
         echo 'Price: $' . $product['price'] . '<br>';
         echo 'Quantity: ' . $product['quantity'] . '<br>';
-        echo 'Sub-Total: $' . $product['price'] * $product['quantity'] . '<br>';
+        $subtotal = $product['price'] * $product['quantity'];
+        echo 'Sub-Total: $' . $subtotal . '<br>';
         echo '<a href="?removeFromCart&id=' . $product['id'] . '" id="removeButton">Remove from Cart</a>';
         echo '</li>';
-        $totalGlobal += $product['price'] * $product['quantity']; // total global calculation
+        $totalGlobal += $subtotal; // Add the subtotal to the total
     }
     echo '</ul>';
 
-    echo '<div class="total-global">Total: $' . $totalGlobal . '</div>';
+    // Calculate VAT and add it to the total
+    $vat = $totalGlobal * $vatRate;
+    $totalWithVAT = $totalGlobal + $vat;
+
+    echo '<div class="VAT">VAT: $' . $vat . '</div>';
+    echo '<div class="total-global">Total (VAT included): $' . $totalWithVAT . '</div>';
     echo '<a href="checkout.php" id="checkoutButton">Checkout</a>';
+    echo '</div>';
 } 
 else {
     // Display a message if the cart is empty
