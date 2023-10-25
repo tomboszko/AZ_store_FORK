@@ -27,7 +27,7 @@
 
 
 
-<?php
+    <?php
 session_start();
 
 // Function to add a product to the shopping cart
@@ -42,8 +42,22 @@ function addToCart($product) {
     if ($productKey === false) {
         $_SESSION['shoppingCart'][] = $product;
     } else {
-        // chose qty if allready in cart
+        // Update quantity if already in cart
         $_SESSION['shoppingCart'][$productKey]['quantity'] += $product['quantity'];
+    }
+}
+
+// Function to remove a product from the shopping cart
+function removeFromCart($productId) {
+    if (isset($_SESSION['shoppingCart'])) {
+        foreach ($_SESSION['shoppingCart'] as $key => $product) {
+            if ($product['id'] == $productId) {
+                unset($_SESSION['shoppingCart'][$key]);
+                break;
+            }
+        }
+        // Re-index the array
+        $_SESSION['shoppingCart'] = array_values($_SESSION['shoppingCart']);
     }
 }
 
@@ -58,23 +72,31 @@ if (isset($_POST['addToCart'])) {
     addToCart($product);
 }
 
+// If the remove-from-cart action is triggered
+if (isset($_GET['removeFromCart']) && isset($_GET['id'])) {
+    $productId = $_GET['id'];
+    removeFromCart($productId);
+}
+
 // Display contents
 if (isset($_SESSION['shoppingCart'])) {
     echo '<h1>Shopping Cart</h1>';
     echo '<ul>';
     foreach ($_SESSION['shoppingCart'] as $product) {
         echo '<li>';
-        echo 'Product Name: ' . $product['product'] . '<br>';
+        echo 'Product: ' . $product['product'] . '<br>';
         echo 'Price: $' . $product['price'] . '<br>';
         echo 'Quantity: ' . $product['quantity'] . '<br>';
+        echo 'Sub-Total: $' . $product['price'] * $product['quantity'] . '<br>';
+        echo '<a href="?removeFromCart&id=' . $product['id'] . '">Remove from Cart</a>';
         echo '</li>';
+        $totalGlobal += $product['price'] * $product['quantity']; // total global
     }
     echo '</ul>';
+    echo '<div class="total-global">Total: $' . $totalGlobal . '</div>';
+    echo '<a href="checkout.php" class="checkout-button">Checkout</a>';
 } else {
     // Display a message if the cart is empty
     echo 'Your cart is empty.';
 }
 ?>
-
-</body>
-</html>
