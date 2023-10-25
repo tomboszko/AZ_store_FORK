@@ -1,28 +1,22 @@
-<?php header("Content-type: text/css; charset=UTF-8"); ?>
-<style>
-    
-    header{
-        nav {
-        background-color: #333;
-        color: #fff;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;}
+nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
 
-        .logo {
-        font-size: 24px;
-        }
+.logo {
+    font-size: 24px;
+}
 
-        .menu {
-            display: flex;
-            gap: 20px;
-        }
+.menu {
+    display: flex;
+    gap: 20px;
+}
 
-        .cart {
-            font-size: 24px;
-        }
-    }
+.cart {
+    font-size: 24px;
+}
 
-   
-</style>
