@@ -1,0 +1,114 @@
+body{
+    overflow-x: hidden;
+    background: rgb(17,24,32);
+    background: linear-gradient(180deg, rgba(17,24,32,1) 69%, rgba(0,0,0,1) 100%); 
+    color: white;
+}
+/* NAVBAR */
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+}
+
+.logo {
+font-size: 24px;
+}
+
+.menu {
+display: flex;
+gap: 20px;
+
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+.cart {
+font-size: 24px;
+display: flex;
+align-items: center;
+
+    img{
+    height : 30px;
+    fill : withe;
+    }
+}
+/* ******************************* */
+
+/* MAIN DIV*/
+.main{
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.left{
+    margin: auto;
+}
+.right{
+    margin: auto;
+    img{
+        height: 500px;
+    }
+}
+/* ****************************** */
+
+/* PRODUCTS DIV */
+#products{
+    display: flex;
+    justify-content: center;
+}
+/* ***************************** */
+
+/* BEST QUALITY DIV */
+.bestQuality{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img{
+    height: 350px;
+  }
+  .best{
+    font-size: 35px;
+  }
+
+}
+/* *********************** */
+
+/* TESTIMONIAL DIV */
+.testimonials{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: auto;
+  max-width: 1000px;
+}
+.imgTest{
+    border-radius: 50%;
+    height: 100px;
+}
+
+.testP{
+    max-width: 250px;
+}
+/* *********************************** */
+
+/* FOOTER */
+.footerLink{
+display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  margin: auto;
+  padding: 50px;
+}
+a {
+text-decoration: none;
+color: inherit;
+}
+    
+/* *********************************** */
