@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Product to Cart</title>
-</head>
-<body>
+
     <h1>Add Product to Cart</h1>
 
     <form method="post" action="shopping-cart.php">
@@ -24,10 +17,7 @@
         <input type="submit" name="addToCart" value="Add to Cart">
     </form>
 
-
-
-
-    <?php
+<?php
 session_start();
 
 $totalGlobal = 0; // total global variable
@@ -74,7 +64,7 @@ if (isset($_POST['addToCart'])) {
     addToCart($product);
 }
 
-// If the remove-from-cart action is triggered
+// If the remove-from-cart link/button is clicked
 if (isset($_GET['removeFromCart']) && isset($_GET['id'])) {
     $productId = $_GET['id'];
     removeFromCart($productId);
