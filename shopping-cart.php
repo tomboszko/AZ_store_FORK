@@ -90,12 +90,13 @@ if (isset($_SESSION['shoppingCart'])) {
         echo 'Sub-Total: $' . $product['price'] * $product['quantity'] . '<br>';
         echo '<a href="?removeFromCart&id=' . $product['id'] . '">Remove from Cart</a>';
         echo '</li>';
-        $totalGlobal += $product['price'] * $product['quantity']; // total global
+        $totalGlobal += $product['price'] * $product['quantity']; // total global calculation
     }
     echo '</ul>';
     echo '<div class="total-global">Total: $' . $totalGlobal . '</div>';
     echo '<a href="checkout.php" class="checkout-button">Checkout</a>';
-} else {
+} 
+else {
     // Display a message if the cart is empty
     echo 'Your cart is empty.';
 }
