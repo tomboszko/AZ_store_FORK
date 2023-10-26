@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/">
+    <link rel="stylesheet" href="assets/css/style.min.css">
     <title>Shopping Cart</title>
 </head>
 <body>
-    
+<div class="main">
+        <div class= "left">
+            <img src="assets/images/shoe_one.png" alt="grosse shoes" width="400px"> 
+        </div>
 
-<?php
+        <div class="right">
+        <?php
 session_start();
 
 
@@ -87,6 +91,10 @@ else {
 }
 
 ?>
+        </div>
+    </div> 
+
+
 
 </body>
 </html>

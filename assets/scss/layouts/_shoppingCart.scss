@@ -1,14 +1,35 @@
 
+    body {
+        background-color: rgb(17,24,32);
+        font-family: 'poppins', sans-serif;
+    }
+
+    .main {
+        display : flex;
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    
+    
     #cart {
         width: 375px;
-        border: 1px solid black;
         padding: 1rem;
         margin: 1rem;
-        background-color: rgb(17,24,32);
+        background-color: rgba(38, 50, 65, 0.479);
         color: white;
     }
 
     h1 {
+        font-size: 1.5rem;
+        text-align: center;
         margin-top: 0;
         justify-content: center;
         margin-bottom: 1rem;
@@ -52,7 +73,7 @@
         font-size: 0,5rem;
         text-shadow: black 0.1em 0.1em 0.2em;
         color: rgba(57,127,241,1);
-        background-color: rgb(17,24,32);
+        background-color: rgba(38, 50, 65, 0);
         margin-left: auto;
         margin-right: 1rem;
         margin-top: auto;

@@ -36,7 +36,7 @@
         </div>
 
         <div class="right">
-            <img src="assets/images/shoe_one" alt="">
+            <img src="assets/images/shoe_one.png" alt="grosse shoes">
         </div>
     </div>   
 
@@ -105,11 +105,8 @@ if (isset($_POST['addToCart'])) { // Vérifiez le nom du bouton submit
 ?>
 
 
-
-
-
     <div class="bestQuality">
-        <img src="assets/images/shoe_two" alt="">
+        <img src="assets/images/shoe_two.png" alt="second grosse shoes">
         <p class=best>we provide you the <span>best</span> quality.</p>
         <p class= lorem>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim tenetur accusamus quidem cupiditate optio quasi sint possimus, doloremque impedit!</p>
     </div>
