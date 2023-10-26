@@ -58,11 +58,9 @@ if (isset($_POST["shipping_email"])) {
     } 
     else {
          // Empty the shopping cart
-         unset($_SESSION["shoppingCart"]);
-         // Display message
-         echo "<h2>Thank you for your order!</h2>";
-         // Empty the form
-        $_POST = array();
+         session_destroy();
+        // Redirection index.php
+        header("Refresh:0; url=thankyou.php");
     }
 }
 
