@@ -3,6 +3,7 @@ body{
     background: rgb(17,24,32);
     background: linear-gradient(180deg, rgba(17,24,32,1) 69%, rgba(0,0,0,1) 100%); 
     color: white;
+    font-family: 'Poppins';
 }
 /* NAVBAR */
 nav {
@@ -31,6 +32,7 @@ font-size: 24px;
 display: flex;
 align-items: center;
 
+
     img{
     height : 30px;
     fill : withe;
@@ -49,7 +51,12 @@ align-items: center;
 .left{
     margin: auto;
 }
-
+.left h1{
+    text-transform: uppercase;
+}
+span{
+    color: #2461E7;
+}
 .left button {
   padding: 10px;
   border: 0;
@@ -91,11 +98,16 @@ align-items: center;
   img{
     height: 350px;
   }
-  .best{
+.best{
     font-size: 55px;
     max-width: 550px;
     text-align: center;
-  }
+    text-transform: uppercase;
+}
+.lorem{
+  max-width: 550px;
+  text-align: center;
+}
 
 }
 /* *********************** */

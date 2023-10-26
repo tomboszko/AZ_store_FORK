@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <link rel="stylesheet" href="style.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
 <body>
 
@@ -18,16 +19,17 @@
             <div class="nav-item"><a href="#">Contact</a></div>
         </div>
         <div class="cart">
-            <a href="assets/images/shopping-cart.svg"><img src="assets/images/shopping-cart.svg" alt="Shopping Cart Icon"></a>
+            <a href="assets/images/shopping-cart.png"><img src="assets/images/shopping-cart.png" alt="Shopping Cart Icon"></a>
             <p>Login</p>
         </div>
     </nav>
+    <hr>
 </header>
 
 <main>
     <div class="main">
         <div class= "left">
-            <h1>shoe the right one</h1>
+            <h1>shoe the right <span>one</span></h1>
             <button>See our store</button>
         </div>
 
@@ -59,7 +61,7 @@
 
     <div class="bestQuality">
         <img src="assets/images/shoe_two" alt="">
-        <p class=best>WE PROVIDE YOU THE BEST QUALITY.</p>
+        <p class=best>we provide you the <span>best</span> quality.</p>
         <p class= lorem>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim tenetur vel dolor quas, minus velit harum porro molestiae in eius adipisci accusamus quidem cupiditate optio quasi sint possimus, doloremque impedit!</p>
     </div>
 
@@ -82,6 +84,7 @@
             <p class= "testP">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim tenetur vel dolor quas, minus velit harum porro molestiae in eius adipisci accusamus quidem cupiditate optio quasi sint possimus, doloremque impedit!</p>
         </div>
     </div>
+<hr>
 </main>
     
 <footer>
