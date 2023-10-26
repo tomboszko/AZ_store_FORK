@@ -19,7 +19,6 @@ font-size: 24px;
 .menu {
 display: flex;
 gap: 20px;
-
 }
 
 a {
@@ -73,19 +72,6 @@ align-items: center;
   max-width: 900px;
   margin: auto;
   padding-bottom: 100px;
-}
-
-#products .chaussure1 img{
-  height: 150px;
-}
-#products .chaussure2 img{
-  height: 150px;
-}
-#products .chaussure3 img{
-  height: 150px;
-}
-#products .chaussure4 img{
-  height: 150px;
 }
 
 .addBtn{
