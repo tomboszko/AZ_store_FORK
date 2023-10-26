@@ -43,6 +43,7 @@ foreach ($_SESSION['shoppingCart'] as $product) {
     $subtotal = $product['price'] * $product['quantity'];
     $totalGlobal += $subtotal;
     echo '<li>';
+    echo '<img src="' . $product['image_url'] . '" alt="' . $product['product'] . '" width="50px">';
     echo '<div class="product">';
     echo $product['product'];
     echo '  Price: $' . $product['price'] ;
@@ -94,6 +95,7 @@ else {
     #cartIcon {
         margin-bottom: -0.5rem;
         margin-right: 8px;
+        
     }
     #cart ul {
         list-style-type: none;

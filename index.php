@@ -52,6 +52,7 @@ foreach ($products as $product) {
     echo '<h3>' . $product['product'] . '</h3>';
     echo '<p>' . $product['price'] . '</p>';
     echo '<form method="post" action="?addToCart">';
+    echo '<input type="hidden" name="image_url" value="' . $product['image_url'] . '">'; 
     echo '<input type="hidden" name="id" value="' . $product['id'] . '">';
     echo '<input type="hidden" name="Name" value="' . $product['product'] . '">';
     echo '<input type="hidden" name="Price" value="' . $product['price'] . '">';
@@ -86,6 +87,7 @@ function addToCart($product) {
 if (isset($_POST['addToCart'])) { // Vérifiez le nom du bouton submit
     $product = [
         'id' => $_POST['id'],
+        'image_url' => $_POST['image_url'],
         'product' => $_POST['Name'],
         'price' => $_POST['Price'],
         'quantity' => $_POST['quantity'],
