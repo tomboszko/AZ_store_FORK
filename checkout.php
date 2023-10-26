@@ -71,7 +71,7 @@ if (isset($_POST["shipping_email"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css" media="screen"> -->
+    <link rel="stylesheet" href="style.css" media="screen">
     <title>Checkout</title>
 </head>
 <body>
