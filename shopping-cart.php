@@ -37,7 +37,7 @@ function displayShoppingCart() {
 if (isset($_SESSION['shoppingCart'])) {
 
     echo '<div id="cart">';
-echo '<h1><img id="cartIcon" src="assets/images/shopping-cart.svg" alt="Shopping Cart" width="32px">Shopping Cart</h1>';
+echo '<h1>Shopping Cart</h1>';
 echo '<ul>';
 foreach ($_SESSION['shoppingCart'] as $product) {
     $subtotal = $product['price'] * $product['quantity'];
@@ -89,8 +89,12 @@ else {
 
     h1 {
         margin-top: 0;
-        margin-left: 1rem;
+        justify-content: center;
         margin-bottom: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-right: auto;
+        padding-left: auto;
     }
     #cartIcon {
         margin-bottom: -0.5rem;
@@ -111,21 +115,27 @@ else {
         padding-bottom: 1rem;
         display: flex;
         flex-direction: row;
-        
         border-bottom: 1px solid black;
     }
+ .product {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+   
+
     #removeButton {
         width: 1rem;
         height: 1rem;
         font-size: 0,5rem;
         text-shadow: black 0.1em 0.1em 0.2em;
-        line-height: 1rem;
         color: rgba(57,127,241,1);
         background-color: rgb(17,24,32);
-        border-radius: 8px;
         margin-left: auto;
         margin-right: 1rem;
-        padding-left: 4px;
+        margin-top: auto;
+        margin-bottom: auto;
         border : none;  
     }
 
