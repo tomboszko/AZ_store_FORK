@@ -35,33 +35,27 @@
             <img src="assets/images/shoe_one" alt="">
         </div>
     </div>   
-
-    <h2>Our last products</h2>
-    <div id= "products">        
-        <?php 
-        // liste de nos 4 modèles de chaussure
-        $products = [
-            ['id' => 1, 'name' => 'Nike Air Max 270', 'price' => 140, 'image'=> "assets/images/shoe_one.png"],
-            ['id' => 2, 'name' => 'Nike Air Max 280', 'price' => 150, 'image'=> "assets/images/shoe_two.png"],
-            ['id' => 3, 'name' => 'Nike Air Max 290', 'price' => 160, 'image'=> "assets/images/shoe_three.png"],
-            ['id' => 4, 'name' => 'Nike Air Max 300', 'price' => 170, 'image'=> "assets/images/shoe_four.png"], 
-                
-        ];
-
-        foreach ($products as $product) {
-            echo '<div class="product">';
-            echo '<h3>' . $product['name'] . '</h3>';
-            echo '<p>Prix : $' . $product['price'] . '</p>';
-            echo '<form>';
-            echo '<input type="hidden" name="product_id" value="' . $product['id'] . '">';
-            echo '<input type="submit" name="add_to_cart" value="Add to cart">';
-            echo '</form>';
-            echo '</div>';
-        }
-
     
-        ?>
-    </div>
+        
+    <?php 
+    $productsJson = file_get_contents('products.json');
+    $products = json_decode($productsJson, true);
+
+    echo '<h2>Our last products</h2>';
+    echo '<div id="products">';
+
+    foreach ($products as $product) {
+        echo '<div class="product">';
+        echo '<img src="' . $product['image_url'] . '" alt="' . $product['product'] . '" width="150px">';
+        echo '<h3>' . $product['product'] . '</h3>';
+        echo '<p>' . $product['price'] . '</p>';
+        echo '<button class="addToCartBtn">Add to cart</button>';
+        echo '</div>';
+    }
+
+    echo '</div>';
+?>
+
 
     <div class="bestQuality">
         <img src="assets/images/shoe_two" alt="">
