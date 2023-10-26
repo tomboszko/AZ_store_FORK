@@ -35,6 +35,7 @@
 
         <div class="right">
             <img src="assets/images/shoe_one" alt="">
+            <p class="NikeBG">Nike</p>
         </div>
     </div>   
 

@@ -7,6 +7,7 @@ body{
     max-width: 1000px;
     margin: auto;
 }
+
 /* NAVBAR */
 nav {
 display: flex;
@@ -43,6 +44,8 @@ gap: 10px;
 /* ******************************* */
 hr{
     max-width: 1500px;
+    color :rgba(211, 211, 211, 0.564);
+
 }
 /* MAIN DIV*/
 .main{
@@ -59,6 +62,7 @@ hr{
     text-transform: uppercase;
     font-size: 65px;
     line-height: 1em;
+    max-width: 365px;
 }
 span{
     color: #2461E7;
@@ -72,9 +76,21 @@ span{
 }
 .right{
     margin: auto;
+    position: relative;
     img{
-        height: 500px;
+        height: 400px;
     }
+}
+.right .NikeBG {
+    font-size: 222px;
+    position: absolute;
+    top: -155px;
+    z-index: -10;
+    left: 5px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgba(211, 211, 211, 0.564);
+    color: transparent;
+    text-transform: uppercase;
 }
 /* ****************************** */
 
@@ -231,6 +247,7 @@ color: inherit;
         text-transform: uppercase;
         font-size: 65px;
         line-height: 1em;
+        margin: auto;
     }
     span{
         color: #2461E7;
@@ -249,6 +266,9 @@ color: inherit;
             height: 200px;
         }
     }
+    .right .NikeBG{
+        display: none;
+    }
     /* ****************************** */
     
     /* PRODUCTS DIV */
@@ -264,6 +284,7 @@ color: inherit;
       border-radius: 5px;
       background-color:rgb(23, 30, 37);
       text-align: center;
+      margin: 15px 30px;
     }
     .addToCart{
       padding: 10px;
@@ -285,7 +306,8 @@ color: inherit;
       align-items: center;
       padding-bottom: 100px;
       img{
-        height: 350px;
+        height: 250px;
+        margin-bottom: 15px;
       }
     .best{
         font-size: 55px;
