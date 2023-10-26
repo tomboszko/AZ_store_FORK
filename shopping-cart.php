@@ -1,25 +1,8 @@
 
-    <h1>Add Product to Cart</h1>
-
-    <form method="post" action="shopping-cart.php">
-        <label for="id">Product ID:</label>
-        <input type="text" name="id" id="id" required>
-        <label for="Name">Product Name:</label>
-        <input type="text" name="Name" id="Name" required>
-        <label for="Price">Product Price:</label>
-        <input type="text" name="Price" id="Price" required>
-        <label for="quantity">Quantity:</label>
-        <input type="text" name="quantity" id="quantity" required>
-        <input type="submit" name="addToCart" value="Add to Cart">
-    </form>
-
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1); // must be removed in Production
 session_start();
-
-
-
 
 
 
