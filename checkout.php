@@ -19,10 +19,16 @@ if(isset($_SESSION["shoppingCart"])) {
         echo "Total: $" . ($item['price'] * $item['quantity']) . "<br>";
         echo "</div>";
     }
-    
+
+    // Display total price
+    $total_price = 0;
+    foreach ($cart_items as $item) {
+        $total_price += ($item['price'] * $item['quantity']);
+    }
+    echo "<h2>Total Price: $" . $total_price . "</h2>";
 } 
 else {
-    echo "No items in cart.";
+    echo "<p> No items in cart. </p>";
 }
 
 //Sanitize input
