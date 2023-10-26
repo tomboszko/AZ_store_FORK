@@ -1,7 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <title>Shopping Cart</title>
+</head>
+<body>
+<div class="main">
+        <div class= "left">
+            <img src="assets/images/shoe_one.png" alt="grosse shoes" width="400px"> 
+        </div>
 
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1); // must be removed in Production
+        <div class="right">
+        <?php
 session_start();
 
 
@@ -79,107 +91,10 @@ else {
 }
 
 ?>
-
-<style>
-    #cart {
-        width: 375px;
-        border: 1px solid black;
-        padding: 1rem;
-        margin: 1rem;
-        background-color: rgb(17,24,32);
-        color: white;
-    }
-
-    h1 {
-        margin-top: 0;
-        justify-content: center;
-        margin-bottom: 1rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        padding-right: auto;
-        padding-left: auto;
-    }
-    #cartIcon {
-        margin-bottom: -0.5rem;
-        margin-right: 8px;
-        
-    }
-    #cart ul {
-        list-style-type: none;
-        padding: 0;
-        margin-bottom: 0rem;
-        display: flex;
-        flex-direction: column;
-        
-    }
-    #cart li {
-        margin: 1rem;
-        margin-top: 0rem;
-        padding-bottom: 1rem;
-        display: flex;
-        flex-direction: row;
-        border-bottom: 1px solid black;
-    }
- .product {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-   
-
-    #removeButton {
-        width: 1rem;
-        height: 1rem;
-        font-size: 0,5rem;
-        text-shadow: black 0.1em 0.1em 0.2em;
-        color: rgba(57,127,241,1);
-        background-color: rgb(17,24,32);
-        margin-left: auto;
-        margin-right: 1rem;
-        margin-top: auto;
-        margin-bottom: auto;
-        border : none;  
-    }
-
-    #removeButton:hover {
-        color: grey;
-    }
-#removeButoon:active {
-    transform: scale(0,7);
-}
+        </div>
+    </div> 
 
 
-    #checkoutButton {
-        display: block;
-        width: 90%;
-        height: 2rem;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        border: none;
-        border-radius: 5px;
-        background: linear-gradient(90deg, rgba(57,127,241,1) 0%, rgba(31,61,146,1) 100%);
-        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-        color: white;
-        font-size: 1rem;
-        font-weight: bold;
-}
-    #checkoutButton:active {
-        background-color: #3e8e41;
-        transform: translate(0, 2px);
-    }
-    #checkoutButton:hover {
-        background-color: #3e8e41;
 
-
-        
-    }
-    .totalGlobal {
-        font-weight: bold;
-        text-align: right;
-        margin-right: 1rem;
-    }
-
-</style>
+</body>
+</html>
