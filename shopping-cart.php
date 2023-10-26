@@ -43,12 +43,14 @@ foreach ($_SESSION['shoppingCart'] as $product) {
     $subtotal = $product['price'] * $product['quantity'];
     $totalGlobal += $subtotal;
     echo '<li>';
-    echo '<img src="' . $product['image_url'] . '" alt="' . $product['product'] . '" width="50px">';
+    echo '<img src="' . $product['image_url'] . '" alt="' . $product['product'] . '" width="60px">';
     echo '<div class="product">';
     echo $product['product'];
+    echo '<br>';
     echo '  Price: $' . $product['price'] ;
+    echo '<br>';
     echo '  Qty: ' . $product['quantity'] ;
-    echo '</select>';
+    echo '<br>';
     echo '  Sub-Total: $' . $subtotal ;
     echo '</div>';
     echo '<button type="button" id="removeButton" onclick="window.location.href=\'?removeFromCart&id=' . $product['id'] . '\'">X</button>';
@@ -80,6 +82,7 @@ else {
 
 <style>
     #cart {
+        width: 375px;
         border: 1px solid black;
         padding: 1rem;
         margin: 1rem;
