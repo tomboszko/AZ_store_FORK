@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// var_dump($_POST);
+var_dump($_POST);
 
 if(isset($_SESSION["cart_items"])) {
 
@@ -26,15 +26,11 @@ else {
 }
 
 //Sanitize input
-function sanitize(){
-    $shipping_firstname = filter_var($_POST["shipping_firstname"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $shipping_lastname = filter_var($_POST["shipping_lastname"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $shipping_email = filter_var($_POST["shipping_email"], FILTER_SANITIZE_EMAIL);
-    $shipping_address = filter_var($_POST["shipping_address"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $shipping_city = filter_var($_POST["shipping_city"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $shipping_zip = filter_var($_POST["shipping_zip"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $shipping_country = filter_var($_POST["shipping_country"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-
+function sanitize($data){
+    $data = htmlspecialchars($data);
+    $data = strip_tags($data);
+    $data = trim($data);
+    return $data;
 }
 
 
@@ -48,6 +44,18 @@ if (isset($_POST["shipping_email"])) {
          unset($_SESSION["cart_items"]);
          // Display message
          echo "<h2>Thank you for your order!</h2>";
+         // Empty the form
+        $_POST = array();
+        // Sanitize input
+        sanitize("shipping_firstname");
+        sanitize("shipping_lastname");
+        sanitize("shipping_email");
+        sanitize("shipping_address");
+        sanitize("shipping_city");
+        sanitize("shipping_zip");
+        sanitize("shipping_country");
+
+
     }
 }
 
@@ -58,6 +66,7 @@ if (isset($_POST["shipping_email"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css" media="screen"> -->
     <title>Checkout</title>
 </head>
 <body>
