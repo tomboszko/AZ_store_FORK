@@ -80,6 +80,7 @@ else {
 
 <style>
     #cart {
+        width: 375px;
         border: 1px solid black;
         padding: 1rem;
         margin: 1rem;
