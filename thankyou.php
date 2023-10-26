@@ -38,7 +38,7 @@ else {
     <title>Document</title>
 </head>
 <body>
-    <h1> Thank you for your order !</h1>
+    <h1> Thank you for your order <?php echo rand(0, 1000000) ?>!</h1>
 
 </body>
 </html>

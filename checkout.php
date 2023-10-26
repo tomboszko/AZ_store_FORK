@@ -39,16 +39,16 @@ function sanitize($data){
     return $data;
 }
 
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//     // Sanitize input data
-//     $sanitized_firstname = sanitize($_POST["shipping_firstname"]);
-//     $sanitized_lastname = sanitize($_POST["shipping_lastname"]);
-//     $sanitized_email = sanitize($_POST["shipping_email"]);
-//     $sanitized_address = sanitize($_POST["shipping_address"]);
-//     $sanitized_city = sanitize($_POST["shipping_city"]);
-//     $sanitized_zip = sanitize($_POST["shipping_zip"]);
-//     $sanitized_country = sanitize($_POST["shipping_country"]);
-// }
+if ($_SERVER["REQUEST_METHOD"] == "post") {
+    // Sanitize input data
+    $sanitized_firstname = sanitize($_POST["shipping_firstname"]);
+    $sanitized_lastname = sanitize($_POST["shipping_lastname"]);
+    $sanitized_email = sanitize($_POST["shipping_email"]);
+    $sanitized_address = sanitize($_POST["shipping_address"]);
+    $sanitized_city = sanitize($_POST["shipping_city"]);
+    $sanitized_zip = sanitize($_POST["shipping_zip"]);
+    $sanitized_country = sanitize($_POST["shipping_country"]);
+}
 
 
 if (isset($_POST["shipping_email"])) {
