@@ -29,7 +29,7 @@
 <main>
     <div class="main">
         <div class= "left">
-            <h1>shoe the right <span>one</span></h1>
+            <h1>shoe the right <span>one</span>.</h1>
             <button>See our store</button>
         </div>
 
@@ -37,6 +37,10 @@
             <img src="assets/images/shoe_one" alt="">
         </div>
     </div>   
+
+    <div>
+        <hr>
+    </div>
     
         
     <?php 
@@ -45,23 +49,23 @@ session_start();
 $productsJson = file_get_contents('products.json');
 $products = json_decode($productsJson, true);
 
-echo '<h2>Our last products</h2>';
+echo '<h2><span>Our</span> last products</h2>';
 echo '<div id="products">';
 
 foreach ($products as $product) {
     echo '<div class="product">';
     echo '<img src="' . $product['image_url'] . '" alt="' . $product['product'] . '" width="150px">';
     echo '<h3>' . $product['product'] . '</h3>';
-    echo '<p>' . $product['price'] . '</p>';
+    echo '<p>' . "$". $product['price'] . '</p>';
     echo '<form method="post" action="?addToCart">';
     echo '<input type="hidden" name="id" value="' . $product['id'] . '">';
     echo '<input type="hidden" name="Name" value="' . $product['product'] . '">';
     echo '<input type="hidden" name="Price" value="' . $product['price'] . '">';
     echo '<label for="quantity">Quantity:</label>';
-    echo '<input type="number" name="quantity" value="1" min="1">';
-    echo '<button type="submit" name="addToCart">Add to Cart</button>'; // Ajout du name "addToCart"
+    echo '<input type="number" class="quantityInput" name="quantity" value="1" min="1">';
+    echo '<button type="submit" class="addToCart" name="addToCart">Add to Cart</button>'; // Ajout du name "addToCart"
     echo '</form>';
-    echo '</div>';
+    echo '</div>';  
 }
 
 echo '</div>';
@@ -101,7 +105,7 @@ if (isset($_POST['addToCart'])) { // Vérifiez le nom du bouton submit
     <div class="bestQuality">
         <img src="assets/images/shoe_two" alt="">
         <p class=best>we provide you the <span>best</span> quality.</p>
-        <p class= lorem>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim tenetur vel dolor quas, minus velit harum porro molestiae in eius adipisci accusamus quidem cupiditate optio quasi sint possimus, doloremque impedit!</p>
+        <p class= lorem>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim tenetur accusamus quidem cupiditate optio quasi sint possimus, doloremque impedit!</p>
     </div>
 
     <div class= "testimonials">
