@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -52,6 +53,41 @@ table {
   border-spacing: 0;
 }
 
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cart {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cart img {
+  height: 30px;
+}
+
+/* ******************************* */
 body {
   background: rgb(17, 24, 32);
   background: linear-gradient(180deg, rgb(17, 24, 32) 50%, rgb(0, 0, 0) 100%);
@@ -122,3 +158,321 @@ body {
   font-size: 30px;
   margin: 50px 0 10px 0;
 }
+
+/* MAIN DIV*/
+.main {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-bottom: 20px;
+  max-width: 1000px;
+}
+
+.left {
+  margin: auto;
+}
+
+.left h1 {
+  text-transform: uppercase;
+  font-size: 65px;
+  line-height: 1em;
+  max-width: 365px;
+}
+
+span {
+  color: #2461E7;
+}
+
+.left button {
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, rgb(57, 127, 241) 0%, rgb(31, 61, 146) 100%);
+  color: white;
+}
+
+.right {
+  margin: auto;
+  position: relative;
+}
+.right img {
+  height: 400px;
+}
+
+.right .NikeBG {
+  font-size: 222px;
+  position: absolute;
+  top: 82px;
+  z-index: -10;
+  left: 5px;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: rgba(211, 211, 211, 0.564);
+  color: transparent;
+  text-transform: uppercase;
+}
+
+/* ****************************** */
+/* PRODUCTS DIV */
+h2 {
+  padding: 15px;
+}
+
+#products {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+.product {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgb(23, 30, 37);
+  text-align: center;
+}
+
+.addToCart {
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  background-color: #397ff1;
+}
+
+.quantityInput {
+  width: 30px;
+  margin: 5px;
+}
+
+/* ***************************** */
+/* BEST QUALITY DIV */
+.bestQuality {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+.bestQuality img {
+  height: 350px;
+}
+.bestQuality .best {
+  font-size: 55px;
+  max-width: 550px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1em;
+  margin: 0;
+}
+.bestQuality .lorem {
+  max-width: 550px;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+}
+
+/* *********************** */
+/* TESTIMONIAL DIV */
+.testimonials {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: auto;
+}
+
+.imgTest {
+  border-radius: 50%;
+  height: 100px;
+}
+
+.testP {
+  max-width: 250px;
+  font-size: 12px;
+  padding: 5px;
+}
+
+/* *********************************** */
+/* FOOTER */
+.footerLink {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  margin: auto;
+  padding: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* *********************************** */
+/* LESS THAN 375px = display none */
+@media screen and (max-width: 375px) {
+  * {
+    display: none;
+  }
+}
+/* MOBILE */
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    background: rgb(17, 24, 32);
+    background: linear-gradient(180deg, rgb(17, 24, 32) 50%, rgb(0, 0, 0) 100%);
+    color: white;
+    font-family: "Poppins";
+    margin: auto;
+    text-align: center;
+  }
+  /* NAVBAR */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .menu {
+    display: flex;
+    gap: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .cart {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .cart img {
+    height: 30px;
+  }
+  /* ******************************* */
+  hr {
+    max-width: 1500px;
+  }
+  /* MAIN DIV*/
+  .main {
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+  }
+  .left {
+    margin: auto;
+  }
+  .left h1 {
+    text-transform: uppercase;
+    font-size: 65px;
+    line-height: 1em;
+    margin: auto;
+  }
+  span {
+    color: #2461E7;
+  }
+  .left button {
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgb(57, 127, 241) 0%, rgb(31, 61, 146) 100%);
+    color: white;
+    margin-bottom: 20px;
+  }
+  .right {
+    margin: auto;
+  }
+  .right img {
+    height: 200px;
+  }
+  .right .NikeBG {
+    display: none;
+  }
+  /* ****************************** */
+  /* PRODUCTS DIV */
+  #products {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    padding-bottom: 100px;
+  }
+  .product {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgb(23, 30, 37);
+    text-align: center;
+    margin: 15px 30px;
+  }
+  .addToCart {
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    background-color: #397ff1;
+  }
+  .quantityInput {
+    width: 30px;
+    margin: 5px;
+  }
+  /* ***************************** */
+  /* BEST QUALITY DIV */
+  .bestQuality {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+  }
+  .bestQuality img {
+    height: 250px;
+    margin-bottom: 15px;
+  }
+  .bestQuality .best {
+    font-size: 55px;
+    max-width: 550px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1em;
+    margin: 0;
+  }
+  .bestQuality .lorem {
+    max-width: 550px;
+    text-align: center;
+    font-size: 12px;
+  }
+  /* *********************** */
+  /* TESTIMONIAL DIV */
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    margin: auto;
+  }
+  .imgTest {
+    border-radius: 50%;
+    height: 100px;
+  }
+  .testP {
+    max-width: 250px;
+    font-size: 12px;
+    margin: auto;
+    padding-bottom: 25px;
+  }
+  /* *********************************** */
+  /* FOOTER */
+  .footerLink {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: auto;
+    padding: 50px;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}/*# sourceMappingURL=style.css.map */

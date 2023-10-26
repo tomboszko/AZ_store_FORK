@@ -1,0 +1,121 @@
+/* MAIN DIV*/
+.main{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 20px;
+    max-width: 1000px;
+}
+.left{
+    margin: auto;
+}
+.left h1{
+    text-transform: uppercase;
+    font-size: 65px;
+    line-height: 1em;
+    max-width: 365px;
+}
+span{
+    color: #2461E7;
+}
+.left button {
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, rgba(57,127,241,1) 0%, rgba(31,61,146,1) 100%);
+  color: white;
+}
+.right{
+    margin: auto;
+    position: relative;
+    img{
+        height: 400px;
+    }
+}
+.right .NikeBG {
+    font-size: 222px;
+    position: absolute;
+    top: 82px;
+    z-index: -10;
+    left: 5px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgba(211, 211, 211, 0.564);
+    color: transparent;
+    text-transform: uppercase;
+}
+/* ****************************** */
+
+/* PRODUCTS DIV */
+h2{
+  padding: 15px;
+}
+#products{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding-bottom: 100px;
+}
+.product{
+  padding: 15px;
+  border-radius: 5px;
+  background-color:rgb(23, 30, 37);
+  text-align: center;
+}
+.addToCart{
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  background-color: #397ff1;
+}
+.quantityInput{
+    width: 30px;
+    margin: 5px;
+}
+/* ***************************** */
+
+/* BEST QUALITY DIV */
+.bestQuality{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+  img{
+    height: 350px;
+  }
+.best{
+    font-size: 55px;
+    max-width: 550px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1em;
+    margin: 0;
+}
+.lorem{
+  max-width: 550px;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+}
+
+}
+/* *********************** */
+
+/* TESTIMONIAL DIV */
+.testimonials{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: auto;
+}
+.imgTest{
+    border-radius: 50%;
+    height: 100px;
+}
+
+.testP{
+    max-width: 250px;
+    font-size: 12px;
+    padding: 5px;
+}
+/* *********************************** */

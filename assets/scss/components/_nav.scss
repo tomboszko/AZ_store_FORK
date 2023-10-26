@@ -1,0 +1,35 @@
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px;
+    }
+    
+    .logo {
+    font-size: 20px;
+    }
+    
+    .menu {
+    display: flex;
+    gap: 20px;
+    }
+    
+    a {
+    text-decoration: none;
+    color: inherit;
+    }
+    
+    .cart {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+        img{
+        height : 30px;
+        }
+    }
+    /* ******************************* */
