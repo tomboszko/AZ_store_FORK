@@ -18,35 +18,9 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1); // must be removed in Production
 session_start();
 
-// Function to add a product to the shopping cart
-function addToCart($product) {
-    if (!isset($_SESSION['shoppingCart'])) {
-        $_SESSION['shoppingCart'] = [];
-    }
 
-    // Check if the product is already in the cart
-    $productKey = array_search($product['id'], array_column($_SESSION['shoppingCart'], 'id'));
 
-    if ($productKey === false) {
-        // Add new entry for new product
-        $_SESSION['shoppingCart'][] = $product;
-    } else {
-        // Update quantity if already in cart
-        $_SESSION['shoppingCart'][$productKey]['quantity'] += $product['quantity'];
-    }
-    
-}
 
-// If the add-to-cart form is submitted
-if (isset($_POST['addToCart'])) {
-    $product = [
-        'id' => $_POST['id'],
-        'product' => $_POST['Name'],
-        'price' => $_POST['Price'],
-        'quantity' => $_POST['quantity'],
-    ];
-    addToCart($product);
-}
 
 
 // Function to remove a product from the shopping cart
