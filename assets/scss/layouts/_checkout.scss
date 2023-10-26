@@ -1,0 +1,53 @@
+body{
+    background: rgb(17,24,32);
+    background: linear-gradient(180deg, rgba(17,24,32,1) 50%, rgba(0,0,0,1) 100%); 
+    color: white;
+    font-family: 'Poppins';
+    max-width: 1000px;
+    margin: auto;
+}
+
+.items{
+
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    margin: 50px 0;
+
+    img{
+        max-width: 70px;
+        margin: 0 20px;
+    }
+
+}
+
+.totalPrice{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.checkoutTitle{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 50px 0 10px 0;
+}
+
+.shippingTitle{
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.formCheckout{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+
+    input{
+        height: 40px;
+        margin: 10px 0;
+        padding: 0 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        outline: none;
+    }
+}

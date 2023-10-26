@@ -11,24 +11,24 @@ if(isset($_SESSION["shoppingCart"])) {
     // var_dump($cart_items);
     
     foreach ($cart_items as $item) {
-        echo "<div>";
+        echo "<div class='items'>";
         echo "<img src='" . $item['image_url'] . "' alt='" . $item['product'] . "'><br>";
         echo "Name: " . $item['product'] . "<br>";
         echo "Price: $" . $item['price'] . "<br>";
         echo "Quantity: " . $item['quantity'] . "<br>";
-        echo "Total: $" . ($item['price'] * $item['quantity']) . "<br>";
+        echo "Sub-total: $" . ($item['price'] * $item['quantity']) . "<br>";
         echo "</div>";
     }
 
     // Display total price
     $total_price = 0;
     foreach ($cart_items as $item) {
-        $total_price += ($item['price'] * $item['quantity']);
+        $total_price += ($item['price'] * $item['quantity'] + ($item['price'] * $item['quantity']) * 0.21);
     }
-    echo "<h2>Total Price: $" . $total_price . "</h2>";
+    echo "<h2 class='totalPrice'>Total Price: $" . $total_price . "</h2>";
 } 
 else {
-    echo "<p> No items in cart. </p>";
+    echo "<p class='noItems'> No items in cart. </p>";
 }
 
 //Sanitize input
@@ -71,13 +71,13 @@ if (isset($_POST["shipping_email"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" media="screen">
+    <link rel="stylesheet" href="assets/css/style.min.css">
     <title>Checkout</title>
 </head>
 <body>
-    <h1>Checkout</h1>
-    <form action="" method="post">
-        <h2>Shipping Information</h2>
+    <h1 class="checkoutTitle">Checkout</h1>
+    <form action="" method="post" class="formCheckout">
+        <h2 class="shippingTitle">Shipping Information</h2>
 
         <label for="shipping_firstname">Firstame:</label>
             <!-- <input type="text" id="shipping_firstname" name="shipping_firstname" required> -->

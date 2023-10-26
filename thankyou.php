@@ -25,7 +25,7 @@ if(isset($_SESSION["shoppingCart"])) {
     echo "<h2>Total Price: $" . $total_price . "</h2>";
 } 
 else {
-    echo "<p> No items in cart. </p>";
+    echo "<p class='noItems'> No items in cart. </p>";
 }
 ?>
 
@@ -34,11 +34,11 @@ else {
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='stylesheet' href='style.css' media="screen">
-    <title>Document</title>
+    <link rel='stylesheet' href='assets/css/style.min.css' media="screen">
+    <title>Thank you</title>
 </head>
 <body>
-    <h1> Thank you for your order <?php echo rand(0, 1000000) ?>!</h1>
+    <h1 class="thanks"> Thank you for your order <?php echo rand(0, 1000000) ?>!</h1>
 
 </body>
 </html>
