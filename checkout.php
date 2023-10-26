@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-var_dump($_POST);
+// var_dump($_POST);
 
 if(isset($_SESSION["cart_items"])) {
 
@@ -54,8 +54,6 @@ if (isset($_POST["shipping_email"])) {
         sanitize("shipping_city");
         sanitize("shipping_zip");
         sanitize("shipping_country");
-
-
     }
 }
 
