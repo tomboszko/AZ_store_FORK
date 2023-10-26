@@ -20,7 +20,7 @@
         </div>
         <div class="cart">
         <p>Login</p>
-            <a href="assets/images/shopping-cart.png"><img id="shoppingIcon" src="assets/images/shopping-cart.png" alt="Shopping Cart Icon" width="32px" ></a>
+            <a href="shopping-cart.php"><img id="shoppingIcon" src="assets/images/shopping-cart.png" alt="Shopping Cart Icon" width="24px" ></a>
 
     
         </div>
