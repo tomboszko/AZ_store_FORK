@@ -19,8 +19,10 @@
             <div class="nav-item"><a href="#">Contact</a></div>
         </div>
         <div class="cart">
-            <a href="assets/images/shopping-cart.png"><img src="assets/images/shopping-cart.png" alt="Shopping Cart Icon"></a>
-            <p>Login</p>
+        <p>Login</p>
+            <a href="assets/images/shopping-cart.png"><img id="shoppingIcon" src="assets/images/shopping-cart.png" alt="Shopping Cart Icon" width="32px" ></a>
+
+    
         </div>
     </nav>
     <hr>
@@ -101,6 +103,8 @@ if (isset($_POST['addToCart'])) { // Vérifiez le nom du bouton submit
     addToCart($product);
 }
 ?>
+
+
 
 
 
