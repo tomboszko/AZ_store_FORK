@@ -3,26 +3,32 @@ session_start();
 
 // var_dump($_POST);
 
-if(isset($_SESSION["cart_items"])) {
+if(isset($_SESSION["shoppingCart"])) {
     
-    $cart_items = $_SESSION["cart_items"];
+    $cart_items = $_SESSION["shoppingCart"];
     
     // Display items in cart
-    var_dump($cart_items);
+    // var_dump($cart_items);
     
     foreach ($cart_items as $item) {
         echo "<div>";
-        echo "<img src='" . $item['image'] . "' alt='" . $item['name'] . "'><br>";
-        echo "Name: " . $item['name'] . "<br>";
+        echo "<img src='" . $item['image_url'] . "' alt='" . $item['product'] . "'><br>";
+        echo "Name: " . $item['product'] . "<br>";
         echo "Price: $" . $item['price'] . "<br>";
         echo "Quantity: " . $item['quantity'] . "<br>";
         echo "Total: $" . ($item['price'] * $item['quantity']) . "<br>";
         echo "</div>";
     }
-    
+
+    // Display total price
+    $total_price = 0;
+    foreach ($cart_items as $item) {
+        $total_price += ($item['price'] * $item['quantity']);
+    }
+    echo "<h2>Total Price: $" . $total_price . "</h2>";
 } 
 else {
-    echo "No items in cart.";
+    echo "<p> No items in cart. </p>";
 }
 
 //Sanitize input
@@ -33,7 +39,16 @@ function sanitize($data){
     return $data;
 }
 
-
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     // Sanitize input data
+//     $sanitized_firstname = sanitize($_POST["shipping_firstname"]);
+//     $sanitized_lastname = sanitize($_POST["shipping_lastname"]);
+//     $sanitized_email = sanitize($_POST["shipping_email"]);
+//     $sanitized_address = sanitize($_POST["shipping_address"]);
+//     $sanitized_city = sanitize($_POST["shipping_city"]);
+//     $sanitized_zip = sanitize($_POST["shipping_zip"]);
+//     $sanitized_country = sanitize($_POST["shipping_country"]);
+// }
 
 
 if (isset($_POST["shipping_email"])) {
@@ -43,19 +58,11 @@ if (isset($_POST["shipping_email"])) {
     } 
     else {
          // Empty the shopping cart
-         unset($_SESSION["cart_items"]);
+         unset($_SESSION["shoppingCart"]);
          // Display message
          echo "<h2>Thank you for your order!</h2>";
          // Empty the form
         $_POST = array();
-        // Sanitize input
-        sanitize("shipping_firstname");
-        sanitize("shipping_lastname");
-        sanitize("shipping_email");
-        sanitize("shipping_address");
-        sanitize("shipping_city");
-        sanitize("shipping_zip");
-        sanitize("shipping_country");
     }
 }
 
