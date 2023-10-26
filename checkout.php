@@ -4,12 +4,12 @@ session_start();
 // var_dump($_POST);
 
 if(isset($_SESSION["cart_items"])) {
-
+    
     $cart_items = $_SESSION["cart_items"];
-
+    
     // Display items in cart
     var_dump($cart_items);
-
+    
     foreach ($cart_items as $item) {
         echo "<div>";
         echo "<img src='" . $item['image'] . "' alt='" . $item['name'] . "'><br>";
@@ -32,6 +32,8 @@ function sanitize($data){
     $data = trim($data);
     return $data;
 }
+
+
 
 
 if (isset($_POST["shipping_email"])) {
