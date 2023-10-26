@@ -1,7 +1,7 @@
 body{
     overflow-x: hidden;
     background: rgb(17,24,32);
-    background: linear-gradient(180deg, rgba(17,24,32,1) 69%, rgba(0,0,0,1) 100%); 
+    background: linear-gradient(180deg, rgba(17,24,32,1) 50%, rgba(0,0,0,1) 100%); 
     color: white;
     font-family: 'Poppins';
     max-width: 1000px;
@@ -85,7 +85,12 @@ span{
   margin: auto;
   padding-bottom: 100px;
 }
-
+.product{
+  padding: 15px;
+  border-radius: 5px;
+  background-color:rgb(23, 30, 37);
+  text-align: center;
+}
 .addToCart{
   padding: 10px;
   border: 0;
