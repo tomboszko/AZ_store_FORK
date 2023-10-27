@@ -52,15 +52,6 @@ table {
   border-spacing: 0;
 }
 
-body {
-  background: rgb(17, 24, 32);
-  background: linear-gradient(180deg, rgb(17, 24, 32) 50%, rgb(0, 0, 0) 100%);
-  color: white;
-  font-family: "Poppins";
-  max-width: 1000px;
-  margin: auto;
-}
-
 .items {
   display: flex;
   flex-direction: row;
@@ -102,15 +93,6 @@ body {
   outline: none;
 }
 
-body {
-  background: rgb(17, 24, 32);
-  background: linear-gradient(180deg, rgb(17, 24, 32) 50%, rgb(0, 0, 0) 100%);
-  color: white;
-  font-family: "Poppins";
-  max-width: 1000px;
-  margin: auto;
-}
-
 .noItems {
   margin: 50px 0;
   font-size: 30px;
@@ -121,4 +103,33 @@ body {
   margin: 0 auto;
   font-size: 30px;
   margin: 50px 0 10px 0;
+}
+
+.button-redirec {
+  align-items: center;
+  background-color: #0A66C2;
+  margin-top: 20px;
+  border: 0;
+  border-radius: 100px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  vertical-align: middle;
+}
+
+.button-redirec:hover,
+.button-redirec:focus {
+  background-color: #16437E;
+  color: white;
 }
