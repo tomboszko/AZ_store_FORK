@@ -16,7 +16,6 @@ consolidation, 3 days
 ![Alt text](https://github.com/becodeorg/CRL-KELLER-6/blob/main/1.TRAIL/2.The-Hill/2.PHP/AZ-Store/az_store.png)
 
 ### Must have
-
     * The user should be able to add a product to the shopping cart.
     * The user should be able to remove a product from the shopping cart.
     * The user should be able to see the total price of the products in the shopping cart. (Hard Bonus : including VAT)
@@ -24,12 +23,15 @@ consolidation, 3 days
     * Use an array to store the products. Each product should be an array.
 
 ## Difficultés 
-* Tom   * bosser sur une pièce du "puzzle"
-        * essayer le bonus : petit bug
+* Tom
+  * bosser sur une pièce du "puzzle"
+  * essayer le bonus : petit bug
 
-* Elodie * récup les données
-         * sanitize
+* Elodie
+  * récup les données
+  * sanitize
 
-* Lucas * comment ajouter du CSS dans un PHP file
-        * config localhost
-        * transposer la théorie des exercices du parcours PHP au travail de groupe
+* Lucas
+  * comment ajouter du CSS dans un PHP file
+  * config localhost
+  * transposer la théorie des exercices du parcours PHP au travail de groupe
