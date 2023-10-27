@@ -1,0 +1,184 @@
+/* LESS THAN 375px = display none */
+@media screen and (max-width: 375px){
+    * {
+      display: none;
+    }
+  }
+/* MOBILE */
+@media screen and (min-width: 375px) and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+        background: rgb(17,24,32);
+        background: linear-gradient(180deg, rgba(17,24,32,1) 50%, rgba(0,0,0,1) 100%); 
+        color: white;
+        font-family: 'Poppins';
+        margin: auto;
+        text-align: center;
+    }
+    /* NAVBAR */
+    nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    }
+    
+    .logo {
+    font-size: 20px;
+    }
+    
+    .menu {
+    display: flex;
+    gap: 20px;
+    }
+    
+    a {
+    text-decoration: none;
+    color: inherit;
+    }
+    
+    .cart {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+        img{
+        height : 30px;
+        }
+      }
+      .cartCount {
+        margin-left: -32px;
+  }
+    /* ******************************* */
+    hr{
+        max-width: 1500px;
+    }
+    /* MAIN DIV*/
+    .main{
+        display: block;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 20px;
+    }
+    .left{
+        margin: auto;
+    }
+    .left h1{
+        text-transform: uppercase;
+        font-size: 65px;
+        line-height: 1em;
+        margin: auto;
+    }
+    span{
+        color: #2461E7;
+    }
+    .left button {
+      padding: 10px;
+      border: 0;
+      border-radius: 5px;
+      background: linear-gradient(90deg, rgba(57,127,241,1) 0%, rgba(31,61,146,1) 100%);
+      color: white;
+     margin-bottom: 20px;
+    }
+    .right{
+        margin: auto;
+        img{
+            height: 200px;
+        }
+    }
+    .right .NikeBG{
+        display: none;
+    }
+    /* ****************************** */
+    
+    /* PRODUCTS DIV */
+    #products{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: auto;
+      padding-bottom: 100px;
+    }
+    .product{
+      padding: 15px;
+      border-radius: 5px;
+      background-color:rgb(23, 30, 37);
+      text-align: center;
+      margin: 15px 30px;
+    }
+    .addToCart{
+      padding: 10px;
+      border: 0;
+      border-radius: 5px;
+      color: white;
+      background-color: #397ff1;
+    }
+    .quantityInput{
+        width: 30px;
+        margin: 5px;
+    }
+    /* ***************************** */
+    
+    /* BEST QUALITY DIV */
+    .bestQuality{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 100px;
+      img{
+        height: 250px;
+        margin-bottom: 15px;
+      }
+    .best{
+        font-size: 55px;
+        max-width: 550px;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1em;
+        margin: 0;
+    }
+    .lorem{
+      max-width: 550px;
+      text-align: center;
+      font-size: 12px;
+    }
+    
+    }
+    /* *********************** */
+    
+    /* TESTIMONIAL DIV */
+    .testimonials{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: center;
+      margin: auto;
+    }
+    .imgTest{
+        border-radius: 50%;
+        height: 100px;
+    }
+    
+    .testP{
+        max-width: 250px;
+        font-size: 12px;
+        margin: auto;
+        padding-bottom: 25px;
+    }
+    /* *********************************** */
+    
+    /* FOOTER */
+    .footerLink{
+    display: flex;
+      justify-content: space-between;
+      max-width: 300px;
+      margin: auto;
+      padding: 50px;
+    }
+    a {
+    text-decoration: none;
+    color: inherit;
+    }
+  }
