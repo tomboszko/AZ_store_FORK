@@ -8,6 +8,17 @@
 </head>
 <body>
 
+<?php // count the number of products in the shopping cart
+session_start();
+
+// Check if shopping cart exists and get count
+if (isset($_SESSION['shoppingCart'])) {
+    $count = count($_SESSION['shoppingCart']);
+} else {
+    $count = 0;
+}
+?>
+
 <header>
     <nav>
         <div class="logo">AZ[store]</div>
@@ -20,6 +31,7 @@
         <div class="cart">
         <p>Login</p>
             <a href="shopping-cart.php"><img id="shoppingIcon" src="assets/images/shopping-cart.png" alt="Shopping Cart Icon" width="24px" ></a>
+            <span class="cartCount"><?php echo $count; ?></span> <!-- Display the count -->
 
     
         </div>
@@ -73,6 +85,10 @@ foreach ($products as $product) {
 
 echo '</div>';
 
+// Count the number of products in the shopping cart
+
+    
+
 // Function to add a product to the shopping cart
 function addToCart($product) {
     if (!isset($_SESSION['shoppingCart'])) {
@@ -89,6 +105,9 @@ function addToCart($product) {
         // Update quantity if already in cart
         $_SESSION['shoppingCart'][$productKey]['quantity'] += $product['quantity'];
     }
+
+
+
 }
 
 // If the add-to-cart form is submitted
