@@ -119,7 +119,7 @@ a {
 }
 
 #menuItems {
-  display: block;
+  display: none;
   background: rgb(57, 127, 241);
   padding: 40px;
   position: absolute;
