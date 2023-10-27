@@ -45,7 +45,7 @@ if (isset($_SESSION['shoppingCart'])) {
     echo '<div id="cart">';
     echo '<div id="cartHeader">';
     echo '<button type="button" id="backButton" onclick="window.location.href=\'index.php\'">X</button>';
-echo '<h1>Shopping Cart</h1>';
+echo '<h1>Your Shopping Cart</h1>';
 echo '</div>';
 echo '<ul>';
 foreach ($_SESSION['shoppingCart'] as $product) {
