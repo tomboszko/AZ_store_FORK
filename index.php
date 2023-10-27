@@ -103,12 +103,13 @@ function addToCart($product) {
     if ($productKey === false) {
         // Add new entry for new product
         $_SESSION['shoppingCart'][] = $product;
-        $count = count($_SESSION['shoppingCart']);
+        
     } else {
         // Update quantity if already in cart
         $_SESSION['shoppingCart'][$productKey]['quantity'] += $product['quantity'];
     }
 
+    count($_SESSION['shoppingCart']);
 }
 
 // If the add-to-cart form is submitted
