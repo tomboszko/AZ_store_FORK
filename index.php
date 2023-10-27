@@ -60,7 +60,7 @@ if (isset($_SESSION['shoppingCart'])) {
     
         
     <?php 
-session_start();
+
 
 $productsJson = file_get_contents('products.json');
 $products = json_decode($productsJson, true);
