@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
-    <link rel="stylesheet" href="style.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/style.min.css" media="screen">
 </head>
 <body>
 
@@ -19,8 +18,10 @@
             <div class="nav-item"><a href="#">Contact</a></div>
         </div>
         <div class="cart">
-            <a href="assets/images/shopping-cart.png"><img src="assets/images/shopping-cart.png" alt="Shopping Cart Icon"></a>
-            <p>Login</p>
+        <p>Login</p>
+            <a href="shopping-cart.php"><img id="shoppingIcon" src="assets/images/shopping-cart.png" alt="Shopping Cart Icon" width="24px" ></a>
+
+    
         </div>
     </nav>
     <hr>
@@ -34,7 +35,7 @@
         </div>
 
         <div class="right">
-            <img src="assets/images/shoe_one" alt="">
+            <img src="assets/images/shoe_one.png" alt="grosse shoes">
         </div>
     </div>   
 
@@ -103,9 +104,8 @@ if (isset($_POST['addToCart'])) { // Vérifiez le nom du bouton submit
 ?>
 
 
-
     <div class="bestQuality">
-        <img src="assets/images/shoe_two" alt="">
+        <img src="assets/images/shoe_two.png" alt="second grosse shoes">
         <p class=best>we provide you the <span>best</span> quality.</p>
         <p class= lorem>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim tenetur accusamus quidem cupiditate optio quasi sint possimus, doloremque impedit!</p>
     </div>
