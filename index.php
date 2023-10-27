@@ -32,8 +32,10 @@
             <div class="nav-item"><a href="#">Contact</a></div>
         </div>
         <div class="cart">
-            <a href="assets/images/shopping-cart.png"><img src="assets/images/shopping-cart.png" alt="Shopping Cart Icon"></a>
-            <p>Login</p>
+        <p>Login</p>
+            <a href="shopping-cart.php"><img id="shoppingIcon" src="assets/images/shopping-cart.png" alt="Shopping Cart Icon" width="24px" ></a>
+
+    
         </div>
         <div class="burger-menu">
             <span class="bar"></span>
@@ -60,7 +62,7 @@
         </div>
 
         <div class="right">
-            <img src="assets/images/shoe_one" alt="">
+            <img src="assets/images/shoe_one.png" alt="grosse shoes">
             <p class="NikeBG">Nike</p>
         </div>
     </div>   
@@ -84,14 +86,14 @@ foreach ($products as $product) {
     echo '<img src="' . $product['image_url'] . '" alt="' . $product['product'] . '" width="150px">';
     echo '<h3>' . $product['product'] . '</h3>';
     echo '<p>' . "$". $product['price'] . '</p>';
-    echo '<form method="post" action="?addToCart">';
+    echo '<form id="addToCartForm" method="post" action="?addToCart">';
     echo '<input type="hidden" name="image_url" value="' . $product['image_url'] . '">'; 
     echo '<input type="hidden" name="id" value="' . $product['id'] . '">';
     echo '<input type="hidden" name="Name" value="' . $product['product'] . '">';
     echo '<input type="hidden" name="Price" value="' . $product['price'] . '">';
     echo '<label for="quantity">Quantity:</label>';
     echo '<input type="number" class="quantityInput" name="quantity" value="1" min="1">';
-    echo '<button type="submit" class="addToCart" name="addToCart">Add to Cart</button>'; // Ajout du name "addToCart"
+    echo '<button type="submit" class="addToCart" name="addToCart">Add to Cart</button>';
     echo '</form>';
     echo '</div>';  
 }
@@ -130,9 +132,8 @@ if (isset($_POST['addToCart'])) { // Vérifiez le nom du bouton submit
 ?>
 
 
-
     <div class="bestQuality">
-        <img src="assets/images/shoe_two" alt="">
+        <img src="assets/images/shoe_two.png" alt="second grosse shoes">
         <p class=best>we provide you the <span>best</span> quality.</p>
         <p class= lorem>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim tenetur accusamus quidem cupiditate optio quasi sint possimus, doloremque impedit!</p>
     </div>

@@ -75,6 +75,15 @@ if (isset($_POST["shipping_email"])) {
     <title>Checkout</title>
 </head>
 <body>
+    <form action="" method="post">
+        <input type="submit" name="return" value="Return to Cart" class="button-redirec">
+    </form>
+    <?php
+         if(array_key_exists("return", $_POST)) { 
+            header("Location: shopping-cart.php");
+        } 
+    ?>
+
     <h1 class="checkoutTitle">Checkout</h1>
     <form action="" method="post" class="formCheckout">
         <h2 class="shippingTitle">Shipping Information</h2>
@@ -159,10 +168,11 @@ if (isset($_POST["shipping_email"])) {
                 echo ("<input type='text' id='shipping_country' name='shipping_country' required>");
             }
             ?>
+        <div class="button-submit">
 
-        <input type="submit" value="Submit Order" id="submit_btn">
+            <input type="submit" value="Submit Order" id="submit_btn" class="button-redirec">
+        </div>
 
-        
     </form>
 </body>    
 </html>

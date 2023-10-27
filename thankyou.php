@@ -38,7 +38,19 @@ else {
     <title>Thank you</title>
 </head>
 <body>
+    <div class="body-thanks">
     <h1 class="thanks"> Thank you for your order <?php echo rand(0, 1000000) ?>!</h1>
 
+    <form method="post" class="form-redirec"> 
+        <input type="submit" name="button" class="button-redirec" value="Return to Store" />
+    </form> 
+    <?php
+         if(array_key_exists("button", $_POST)) { 
+            header("Location: index.php");
+        } 
+    ?>
+
+    </div>
+    
 </body>
 </html>

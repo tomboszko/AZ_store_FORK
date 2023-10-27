@@ -1,12 +1,3 @@
-body{
-    background: rgb(17,24,32);
-    background: linear-gradient(180deg, rgba(17,24,32,1) 50%, rgba(0,0,0,1) 100%); 
-    color: white;
-    font-family: 'Poppins';
-    max-width: 1000px;
-    margin: auto;
-}
-
 .items{
 
     display: flex;
@@ -35,6 +26,7 @@ body{
 .shippingTitle{
     margin: 20px 0;
     font-size: 20px;
+    padding: 0px !important;
 }
 
 .formCheckout{
@@ -51,3 +43,32 @@ body{
         outline: none;
     }
 }
+
+.button-submit{
+  display: flex;
+  justify-content: center;
+}
+
+#submit_btn{
+    background-color: #0A66C2;
+    margin-top: 20px;
+    border: 0;
+    border-radius: 100px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    padding: 0px 40px;
+    text-align: center;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  }
+  
+  #submit_btn:hover,
+  #submit_btn:focus { 
+    background-color: #16437E;
+    color: white;
+  }
