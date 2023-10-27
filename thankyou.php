@@ -38,6 +38,7 @@ else {
     <title>Thank you</title>
 </head>
 <body>
+    <div class="body-thanks">
     <h1 class="thanks"> Thank you for your order <?php echo rand(0, 1000000) ?>!</h1>
 
     <form method="post" class="form-redirec"> 
@@ -48,6 +49,8 @@ else {
             header("Location: index.php");
         } 
     ?>
+
+    </div>
     
 </body>
 </html>

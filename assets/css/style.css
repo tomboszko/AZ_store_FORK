@@ -91,6 +91,8 @@ a {
 body {
   background: rgb(17, 24, 32);
   background: linear-gradient(180deg, rgb(17, 24, 32) 50%, rgb(0, 0, 0) 100%);
+  background-repeat: no-repeat;
+  height: auto;
   color: white;
   font-family: "Poppins";
   max-width: 1000px;
@@ -258,6 +260,10 @@ h1 {
   border-radius: 5px;
   border: 1px solid #ccc;
   outline: none;
+}
+
+.body-thanks {
+  height: 100vh;
 }
 
 .noItems {

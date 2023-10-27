@@ -1,6 +1,8 @@
 body{
     background: rgb(17,24,32);
-    background: linear-gradient(180deg, rgba(17,24,32,1) 50%, rgba(0,0,0,1) 100%); 
+    background: linear-gradient(180deg, rgba(17,24,32,1) 50%, rgba(0,0,0,1) 100%);
+    background-repeat: no-repeat; 
+    height: auto;
     color: white;
     font-family: 'Poppins';
     max-width: 1000px;
