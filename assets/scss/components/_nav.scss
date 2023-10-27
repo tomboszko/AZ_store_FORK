@@ -30,6 +30,7 @@ nav {
     
         img{
         height : 30px;
+        z-index: 1;
         }
     }
 
@@ -40,8 +41,10 @@ nav {
         border-radius: 50%;
         font-size: 12px;
         font-weight: 600;
-        position: relative;
-        right: 2rem;
+        position: static;
+        margin-left: -27px;
+        
+
         
     }
     /* ******************************* */

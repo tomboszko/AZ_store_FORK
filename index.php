@@ -17,6 +17,9 @@ if (isset($_SESSION['shoppingCart'])) {
 } else {
     $count = 0;
 }
+// update the count if the add-to-cart form is submitted
+$count = count($_SESSION['shoppingCart']);
+
 ?>
 
 <header>
