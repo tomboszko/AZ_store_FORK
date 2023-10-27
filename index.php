@@ -115,10 +115,6 @@ foreach ($products as $product) {
 
 echo '</div>';
 
-// Count the number of products in the shopping cart
-
-    
-
 // Function to add a product to the shopping cart
 function addToCart($product) {
     if (!isset($_SESSION['shoppingCart'])) {
@@ -136,8 +132,11 @@ function addToCart($product) {
         // Update quantity if already in cart
         $_SESSION['shoppingCart'][$productKey]['quantity'] += $product['quantity'];
     }
+//refresh the page
+    header('Location: ' . $_SERVER['PHP_SELF']);
+    exit;
 
-    count($_SESSION['shoppingCart']);
+    
 }
 
 // If the add-to-cart form is submitted
@@ -150,6 +149,9 @@ if (isset($_POST['addToCart'])) { // Vérifiez le nom du bouton submit
         'quantity' => $_POST['quantity'],
     ];
     addToCart($product);
+    count($_SESSION['shoppingCart']);
+    header('Location: ' . $_SERVER['PHP_SELF']);
+    exit;
 }
 ?>
 
