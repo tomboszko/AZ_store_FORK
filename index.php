@@ -7,9 +7,23 @@
     <link rel="stylesheet" href="assets/css/style.min.css" media="screen">
 </head>
 <body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const burgerMenu = document.querySelector(".burger-menu");
+  const menuItems = document.getElementById("menuItems");
 
+  burgerMenu.addEventListener("click", function () {
+    if (menuItems.style.display === "block") {
+      menuItems.style.display = "none";
+    } else {
+      menuItems.style.display = "block";
+    }
+  });
+});
+
+</script>
 <header>
-    <nav>
+    <nav class="nav">
         <div class="logo">AZ[store]</div>
         <div class="menu">
             <div class="nav-item"><a href="#">Home</a></div>
@@ -21,7 +35,20 @@
             <a href="assets/images/shopping-cart.png"><img src="assets/images/shopping-cart.png" alt="Shopping Cart Icon"></a>
             <p>Login</p>
         </div>
-    </nav>
+        <div class="burger-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div id="menuItems">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>    
     <hr>
 </header>
 

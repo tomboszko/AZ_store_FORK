@@ -32,4 +32,46 @@ nav {
         height : 30px;
         }
     }
-    /* ******************************* */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+    
+  
+.burger-menu .bar {
+    width: 30px; 
+    height: 3px; 
+    background-color: #ffffff; 
+    display: block; 
+    margin: 6px 0; 
+}
+
+
+.burger-menu .bar:hover {
+    background-color: rgba(57,127,241,1); 
+}
+#menuItems {
+    display: block;
+    background: rgba(57,127,241,1);
+    padding: 40px;
+    position: absolute;
+    right: 0px;
+    top: 62px;
+  }
+  
+
+@media screen and (min-width: 375px) and (max-width: 768px){
+    .burger-menu {
+        display: inline;
+        width: 30px;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-around;
+    }
+    .nav-item{
+        display: none;
+    }
+    
+}
