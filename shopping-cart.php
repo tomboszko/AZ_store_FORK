@@ -55,7 +55,7 @@ foreach ($_SESSION['shoppingCart'] as $product) {
     $subtotal = $product['price'] * $product['quantity'];
     $totalGlobal += $subtotal;
     echo '<li>';
-    echo '<img src="' . $product['image_url'] . '" alt="' . $product['product'] . '" width="60px">';
+    echo '<img class="imgCart" src="' . $product['image_url'] . '" alt="' . $product['product'] . '"width="60px" >';
     echo '<div class="product">';
     echo $product['product'];
     echo '<br>';
