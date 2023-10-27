@@ -96,7 +96,7 @@ a {
   font-size: 12px;
   font-weight: 600;
   position: static;
-  margin-left: -27px;
+  margin-left: -26px;
 }
 
 /* ******************************* */
@@ -566,6 +566,9 @@ a {
   }
   .cart img {
     height: 30px;
+  }
+  .cartCount {
+    margin-left: -32px;
   }
   /* ******************************* */
   hr {
