@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/css/style.min.css">
     <title>Shopping Cart</title>
 </head>
-<body>
+<body class="bodyShopping">
         <?php
 session_start();
 
