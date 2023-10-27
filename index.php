@@ -59,14 +59,14 @@ foreach ($products as $product) {
     echo '<img src="' . $product['image_url'] . '" alt="' . $product['product'] . '" width="150px">';
     echo '<h3>' . $product['product'] . '</h3>';
     echo '<p>' . "$". $product['price'] . '</p>';
-    echo '<form method="post" action="?addToCart">';
+    echo '<form id="addToCartForm" method="post" action="?addToCart">';
     echo '<input type="hidden" name="image_url" value="' . $product['image_url'] . '">'; 
     echo '<input type="hidden" name="id" value="' . $product['id'] . '">';
     echo '<input type="hidden" name="Name" value="' . $product['product'] . '">';
     echo '<input type="hidden" name="Price" value="' . $product['price'] . '">';
     echo '<label for="quantity">Quantity:</label>';
     echo '<input type="number" class="quantityInput" name="quantity" value="1" min="1">';
-    echo '<button type="submit" class="addToCart" name="addToCart">Add to Cart</button>'; // Ajout du name "addToCart"
+    echo '<button type="submit" class="addToCart" name="addToCart">Add to Cart</button>';
     echo '</form>';
     echo '</div>';  
 }

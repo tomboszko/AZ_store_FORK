@@ -89,6 +89,17 @@ a {
 
 /* ******************************* */
 body {
+  background: rgb(17, 24, 32);
+  background: linear-gradient(180deg, rgb(17, 24, 32) 50%, rgb(0, 0, 0) 100%);
+  background-repeat: no-repeat;
+  height: auto;
+  color: white;
+  font-family: "Poppins";
+  max-width: 1000px;
+  margin: auto;
+}
+
+body {
   font-family: "poppins", sans-serif;
 }
 
@@ -234,138 +245,6 @@ h1 {
   font-weight: bold;
   text-align: right;
   margin-right: 102px;
-}
-
-body {
-  background: rgb(17, 24, 32);
-  background: linear-gradient(180deg, rgb(17, 24, 32) 50%, rgb(0, 0, 0) 100%);
-  background-repeat: no-repeat;
-  height: auto;
-  color: white;
-  font-family: "Poppins";
-  max-width: 1000px;
-  margin: auto;
-}
-
-body {
-  background-color: rgb(17, 24, 32);
-  font-family: "poppins", sans-serif;
-}
-
-.main {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap-reverse;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#cart {
-  width: 375px;
-  padding: 1rem;
-  margin: 1rem;
-  background-color: rgba(38, 50, 65, 0.479);
-  color: white;
-}
-
-h1 {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-top: 0;
-  justify-content: center;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  padding-right: auto;
-  padding-left: auto;
-}
-
-#cartIcon {
-  margin-bottom: -0.5rem;
-  margin-right: 8px;
-}
-
-#cart ul {
-  list-style-type: none;
-  padding: 0;
-  margin-bottom: 0rem;
-  display: flex;
-  flex-direction: column;
-}
-
-#cart li {
-  margin: 1rem;
-  margin-top: 0rem;
-  padding-bottom: 1rem;
-  display: flex;
-  flex-direction: row;
-  border-bottom: 1px solid black;
-}
-
-.product {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-#removeButton {
-  width: 1rem;
-  height: 1rem;
-  font-size: 0, 5rem;
-  text-shadow: black 0.1em 0.1em 0.2em;
-  color: rgb(57, 127, 241);
-  background-color: rgba(38, 50, 65, 0);
-  margin-left: auto;
-  margin-right: 1rem;
-  margin-top: auto;
-  margin-bottom: auto;
-  border: none;
-}
-
-#removeButton:hover {
-  color: grey;
-}
-
-#removeButoon:active {
-  transform: scale(0, 7);
-}
-
-#checkoutButton {
-  display: block;
-  width: 90%;
-  height: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: none;
-  border-radius: 5px;
-  background: linear-gradient(90deg, rgb(57, 127, 241) 0%, rgb(31, 61, 146) 100%);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-#checkoutButton:active {
-  background-color: #3e8e41;
-  transform: translate(0, 2px);
-}
-
-#checkoutButton:hover {
-  background-color: #3e8e41;
-}
-
-.totalGlobal {
-  font-weight: bold;
-  text-align: right;
-  margin-right: 1rem;
 }
 
 .items {
@@ -776,8 +655,4 @@ a {
     text-decoration: none;
     color: inherit;
   }
-<<<<<<< HEAD
-}
-=======
 }/*# sourceMappingURL=style.css.map */
->>>>>>> shopping
