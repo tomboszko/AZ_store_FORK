@@ -2,9 +2,9 @@
 ## Type of challenge 
 consolidation, 3 days
 ## Group 
-Elodie [https://github.com/Taweria]
-Thomas [https://github.com/tomboszko]
-Lucas [https://github.com/lbeauloi?tab=repositories]
+[Elodie](https://github.com/Taweria)
+[Thomas](https://github.com/tomboszko)
+[Lucas](https://github.com/lbeauloi)
 ## Learning Objectives
    * Use variables, conditions, loops, functions, and sessions.
    * Read data from a JSON file in PHP.
