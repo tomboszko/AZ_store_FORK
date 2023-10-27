@@ -7,12 +7,6 @@
     <title>Shopping Cart</title>
 </head>
 <body>
-<div class="main">
-        <div class= "left">
-            <img src="assets/images/shoe_one.png" alt="grosse shoes" width="400px"> 
-        </div>
-
-        <div class="right">
         <?php
 session_start();
 
@@ -49,21 +43,26 @@ function displayShoppingCart() {
 if (isset($_SESSION['shoppingCart'])) {
 
     echo '<div id="cart">';
+    echo '<div id="cartHeader">';
+    echo '<button type="button" id="backButton" onclick="window.location.href=\'index.php\'">X</button>';
 echo '<h1>Shopping Cart</h1>';
+echo '</div>';
 echo '<ul>';
 foreach ($_SESSION['shoppingCart'] as $product) {
     $subtotal = $product['price'] * $product['quantity'];
     $totalGlobal += $subtotal;
     echo '<li>';
     echo '<img class="imgCart" src="' . $product['image_url'] . '" alt="' . $product['product'] . '"width="60px" >';
-    echo '<div class="product">';
+    echo '<div class="productCart">';
     echo $product['product'];
     echo '<br>';
     echo '  Price: $' . $product['price'] ;
     echo '<br>';
     echo '  Qty: ' . $product['quantity'] ;
     echo '<br>';
-    echo '  Sub-Total: $' . $subtotal ;
+    echo '</div>';
+    echo '<div class="subTotal">';
+    echo '$' . $subtotal ;
     echo '</div>';
     echo '<button type="button" id="removeButton" onclick="window.location.href=\'?removeFromCart&id=' . $product['id'] . '\'">X</button>';
     echo '</li>';
@@ -91,10 +90,6 @@ else {
 }
 
 ?>
-        </div>
-    </div> 
-
-
 
 </body>
 </html>
