@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <favicon href="/assets/images/icons8-shoe-24.png">
+    <title>AZ_Store</title>
     <link rel="stylesheet" href="assets/css/style.min.css" media="screen">
 </head>
 <body>
+    
 <?php
     // Include the navbar
    // require 'partials/navbar.php';
