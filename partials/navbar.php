@@ -1,3 +1,5 @@
+<header>
+
 <nav class="nav">
         <div class="logo">AZ[store]</div>
         <div class="menu">
@@ -26,4 +28,5 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
-    </nav>    
+    </nav>   
+</header> 
