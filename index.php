@@ -7,23 +7,15 @@
     <link rel="stylesheet" href="assets/css/style.min.css" media="screen">
 </head>
 <body>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-  const burgerMenu = document.querySelector(".burger-menu");
-  const menuItems = document.getElementById("menuItems");
 
-  burgerMenu.addEventListener("click", function () {
-    if (menuItems.style.display === "block") {
-      menuItems.style.display = "none";
-    } else {
-      menuItems.style.display = "block";
-    }
-  });
-});
 
-</script>
+<?php
 
-<?php // count the number of products in the shopping cart
+
+
+
+
+ // count the number of products in the shopping cart
 session_start();
 
 // Check if shopping cart exists and get count
@@ -37,36 +29,9 @@ if (isset($_SESSION['shoppingCart'])) {
 ?>
 
 <header>
-    <nav class="nav">
-        <div class="logo">AZ[store]</div>
-        <div class="menu">
-            <div class="nav-item"><a href="#">Home</a></div>
-            <div class="nav-item"><a href="#">About</a></div>
-            <div class="nav-item"><a href="#">Products</a></div>
-            <div class="nav-item"><a href="#">Contact</a></div>
-        </div>
-        <div class="cart">
-        <p>Login</p>
-            <a href="shopping-cart.php"><img id="shoppingIcon" src="assets/images/shopping-cart.png" alt="Shopping Cart Icon" width="24px" ></a>
-            <span class="cartCount"><?php echo $count; ?></span> <!-- Display the count -->
-
-    
-        </div>
-        <div class="burger-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <div id="menuItems">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-    </nav>    
-    <hr>
+   <?php 
+require 'partials/navbar.php';
+?>
 </header>
 
 <main>
@@ -82,9 +47,6 @@ if (isset($_SESSION['shoppingCart'])) {
         </div>
     </div>   
 
-    <div>
-        <hr>
-    </div>
     
         
     <?php 
