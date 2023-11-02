@@ -4,7 +4,8 @@
         "product": "Nike Air Max 270",
         "price": 140,
         "image_url": "assets/images/shoe_one.png",
-        "color": "anthracite"
+        "color": ["Anthracite", "Purple", "Bronze", "Green"],
+        "size": ["6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
     },
 
     {
@@ -12,7 +13,8 @@
         "product": "Nike Air Max 280",
         "price": 150,
         "image_url":"assets/images/shoe_two.png",
-        "color": "purple"
+        "color": ["Anthracite", "Purple", "Bronze", "Green"],
+        "size": ["6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
     },
     
     {
@@ -20,7 +22,8 @@
         "product": "Nike Air Max 290",
         "price": 160,
         "image_url":"assets/images/shoe_three.png",
-        "color": "bronze"
+        "color": ["Anthracite", "Purple", "Bronze", "Green"],
+        "size": ["6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
 
     },
 
@@ -29,7 +32,8 @@
         "product": "Nike Air Max 300",
         "price": 170,
         "image_url":"assets/images/shoe_four.png",
-        "color": "green"
+        "color": ["Anthracite", "Purple", "Bronze", "Green"],
+        "size": ["6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
     }
 
  ]
