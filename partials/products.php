@@ -33,6 +33,9 @@ foreach ($products as $product) {
     echo '<input type="hidden" name="id" value="' . $product['id'] . '">';
     echo '<input type="hidden" name="Name" value="' . $product['product'] . '">';
     echo '<input type="hidden" name="Price" value="' . $product['price'] . '">';
+    echo '<label for="color">Color:</label>';
+    echo '<input type="STRING" name="color" value="' . $product['color'][0] . '">';
+
     echo '<label for="quantity">Quantity:</label>';
     echo '<input type="number" class="quantityInput" name="quantity" value="1" min="1">';
     echo '<button type="submit" class="addToCart" name="addToCart">Add to Cart</button>';
