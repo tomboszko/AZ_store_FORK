@@ -8,16 +8,19 @@
     <link rel="stylesheet" href="assets/css/style.min.css" media="screen">
 </head>
 <body>
-    
+
 <?php
+    
     // Include the navbar
-   // require 'partials/navbar.php';
+   require 'partials/navbar.php';
+   // Include the hero
+   //require 'partials/hero.php';
     // Include the products
-   // require 'partials/products.php';
+    require 'partials/products.php';
     // Include the footer
-   // require 'partials/footer.php';
+   require 'partials/footer.php';
     // Include the about
-require 'partials/about.php';
+    //require 'partials/about.php';
 
    ?>
 </body>

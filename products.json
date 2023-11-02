@@ -3,28 +3,33 @@
         "id": 1,
         "product": "Nike Air Max 270",
         "price": 140,
-        "image_url": "assets/images/shoe_one.png"
+        "image_url": "assets/images/shoe_one.png",
+        "color": "anthracite"
     },
 
     {
         "id":2,
         "product": "Nike Air Max 280",
         "price": 150,
-        "image_url":"assets/images/shoe_two.png"
+        "image_url":"assets/images/shoe_two.png",
+        "color": "purple"
     },
     
     {
         "id":3,
         "product": "Nike Air Max 290",
         "price": 160,
-        "image_url":"assets/images/shoe_three.png"
+        "image_url":"assets/images/shoe_three.png",
+        "color": "bronze"
+
     },
 
     {
         "id":4,
         "product": "Nike Air Max 300",
         "price": 170,
-        "image_url":"assets/images/shoe_four.png"
+        "image_url":"assets/images/shoe_four.png",
+        "color": "green"
     }
 
  ]
